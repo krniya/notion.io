@@ -12,10 +12,15 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+    console.log(db);
     return (
-        <html lang='en'>
+        <html lang="en">
             <body className={inter.className}>
-                <ThemeProvider attribute='class' defaultTheme='dark' enableSystem>
+                <ThemeProvider
+                    attribute="class"
+                    defaultTheme="dark"
+                    enableSystem
+                >
                     {children}
                 </ThemeProvider>
             </body>
