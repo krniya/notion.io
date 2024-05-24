@@ -131,7 +131,7 @@ const QuillEditor: React.FC<QuillEditorProps> = ({ dirDetails, dirType, fileId }
     }, [state, pathname, workspaceId]);
 
     //
-    const wrapperRef = useCallback(async (wrapper: any) => {
+    const wrapperRef: any = useCallback(async (wrapper: any) => {
         if (typeof window !== "undefined") {
             if (wrapper === null) return;
             wrapper.innerHTML = "";

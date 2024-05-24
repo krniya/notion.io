@@ -1,3 +1,4 @@
+import AppStateProvider from "@/lib/providers/state-provider";
 import { SubscriptionModalProvider } from "@/lib/providers/subscription-modal-provider";
 import { getActiveProductsWithPrice } from "@/lib/supabase/queries";
 import React from "react";
@@ -13,7 +14,9 @@ const Layout: React.FC<LayoutProps> = async ({ children, params }) => {
     if (error) throw new Error();
     return (
         <main className="flex over-hidden h-screen">
-            <SubscriptionModalProvider products={products}>{children}</SubscriptionModalProvider>
+            <SubscriptionModalProvider products={products}>
+                <AppStateProvider>{children}</AppStateProvider>
+            </SubscriptionModalProvider>
         </main>
     );
 };
