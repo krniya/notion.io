@@ -10,7 +10,7 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = async ({ children, params }) => {
     const { data: products, error } = await getActiveProductsWithPrice();
     console.log("🚀 ~ constLayout:React.FC<LayoutProps>= ~ error:", error);
-    // if (error) throw new Error();
+    if (error) throw new Error();
     return (
         <main className="flex over-hidden h-screen">
             <SubscriptionModalProvider products={products}>{children}</SubscriptionModalProvider>
