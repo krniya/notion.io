@@ -1,6 +1,6 @@
 "use server";
 import { validate } from "uuid";
-import { files, folders, users, workspaces } from "../../../migrations/schema";
+import { files, folders, users, workspaces, prices } from "../../../migrations/schema";
 import db from "./db";
 import { File, Folder, Subscription, User, workspace } from "./supabase.types";
 import { and, eq, ilike, notExists } from "drizzle-orm";
@@ -250,11 +250,11 @@ export const getActiveProductsWithPrice = async () => {
         const res = await db.query.products.findMany({
             where: (pro, { eq }) => eq(pro.active, true),
 
-            // with: {
-            //     prices: {
-            //         where: (pri, { eq }) => eq(pri.active, true),
-            //     },
-            // },
+            with: {
+                prices: {
+                    where: (pri, { eq }) => eq(pri.active, true),
+                },
+            },
         });
         if (res.length) return { data: res, error: null };
         return { data: [], error: null };

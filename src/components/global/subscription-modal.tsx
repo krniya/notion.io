@@ -6,12 +6,12 @@ import { useSupabaseUser } from "@/lib/providers/supabase-user-provider";
 import { formatPrice, postData } from "@/lib/utils";
 import { Button } from "../ui/button";
 import Loader from "./Loader";
-import { Price, ProductWirhPrice } from "@/lib/supabase/supabase.types";
+import { Price, ProductWithPrice } from "@/lib/supabase/supabase.types";
 import { useToast } from "../ui/use-toast";
 import { getStripe } from "@/lib/stripe/stripeClient";
 
 interface SubscriptionModalProps {
-    products: ProductWirhPrice[];
+    products: ProductWithPrice[];
 }
 
 const SubscriptionModal: React.FC<SubscriptionModalProps> = ({ products }) => {
@@ -90,7 +90,6 @@ const SubscriptionModal: React.FC<SubscriptionModalProps> = ({ products }) => {
                               </div>
                           ))
                         : ""}
-                    {/* No Products Available */}
                 </DialogContent>
             )}
         </Dialog>
