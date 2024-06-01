@@ -15,23 +15,23 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="" alt="Logo" width="80" height="80">
+  <a href="https://github.com/krniya/notion.io">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_YWUotEbuX7-L0y0FRaU_ZJPL62KaeyRRvKjOvKryeBf27qrDAeiHC2O0NERiygcUsrE&usqp=CAU" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Notion.io</h3>
 
   <p align="center">
     project_description
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/krniya/notion.io"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
+    <a href="https://github.com/krniya/notion.io">View Demo</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
+    <a href="https://github.com/krniya/notion.io/issues">Report Bug</a>
     ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/krniya/notion.io/issues">Request Feature</a>
   </p>
 </div>
 
@@ -55,11 +55,9 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -68,9 +66,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+A Notion clone is a web application that mimics the functionalities of the popular productivity tool, Notion. It includes features like note-taking, to-do lists, and collaborative workspaces.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -80,12 +78,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 * [![Next][Next.js]][Next-url]
 * [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -94,12 +87,26 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+A Notion-like productivity app built with modern web technologies: Next.js, Supabase, Drizzle ORM, Socket.IO, Stripe, and Tailwind CSS.
+
+### Features
+- Real-time collaboration
+- Note-taking
+- To-do lists
+- User authentication
+- Payment processing
+
+### Tech Stack
+- **Frontend**: Next.js, Tailwind CSS
+- **Backend**: Supabase, Drizzle ORM
+- **Real-time**: Socket.IO
+- **Payments**: Stripe
 
 ### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
+- Node.js (>= 14.x)
+- Next.js 14
+- Supabase account
+- Stripe account
 * npm
   ```sh
   npm install npm@latest -g
@@ -107,19 +114,33 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/krniya/notion.io.git
    ```
-3. Install NPM packages
+2. Install NPM packages
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+
+### Environment Variables
+Create a .env file in the root directory and add the following environment variables:
+```sh
+DATABASE_URL=
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
+SERVICE_ROLE_KEY=
+PW=
+NEXT_PUBLIC_SITE_URL=
+
+
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
+STRIPE_SECRET_KEY=
+STRIPE_WEBHOOK_SECRET=
+
+```
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -128,23 +149,9 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Once the development server is running, you can start using the Notion clone application. You can add, edit, and delete notes and to-do lists. Real-time collaboration is enabled through Socket.IO, and user authentication is handled by Supabase.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
-
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/krniya/notion.io/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -180,39 +187,26 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Nitish Yadav - [@krniya_](https://twitter.com/krniya_) - krnitish@live.in
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
+Project Link: [https://github.com/krniya/FunTick](https://github.com/krniya/FunTick)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/krniya/notion.io.svg?style=for-the-badge
+[contributors-url]: https://github.com/krniya/notion.io/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/krniya/notion.io.svg?style=for-the-badge
+[forks-url]: https://github.com/krniya/notion.io/network/members
+[stars-shield]: https://img.shields.io/github/stars/krniya/notion.io.svg?style=for-the-badge
+[stars-url]: https://github.com/krniya/notion.io/stargazers
+[issues-shield]: https://img.shields.io/github/issues/krniya/notion.io.svg?style=for-the-badge
+[issues-url]: https://github.com/krniya/notion.io/issues
+[license-shield]: https://img.shields.io/github/license/krniya/notion.io.svg?style=for-the-badge
+[license-url]: https://github.com/krniya/notion.io/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[linkedin-url]: https://linkedin.com/in/krniya
 [product-screenshot]: images/screenshot.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
